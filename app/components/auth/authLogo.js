@@ -1,20 +1,19 @@
-import React from 'react';
-import {View,Image} from 'react-native';
-
+import React from "react";
+import { View, Image } from "react-native";
+import logo from "../../assets/nba.png";
 const LogoComponent = () => {
-    return ( 
-        <View>
-            <Image
-            source={}
-            resizeMode={'contain'}
-            style={{
-                width:270,
-                height:150
-            }}>
+  return (
+    <View style={{ alignItems: "center" }}>
+      <Image
+        source={logo}
+        resizeMode={"contain"}
+        style={{
+          width: 250,
+          height: 100
+        }}
+      />
+    </View>
+  );
+};
 
-            </Image>
-        </View>
-     );
-}
- 
 export default LogoComponent;
