@@ -42,7 +42,7 @@ class AuthForm extends Component {
   hasErrors = () =>
     this.state.hasErrors ? (
       <View style={styles.errorContainer}>
-        <Text style={styles.errorLabel}>Oops, check you'r info</Text>
+        <Text style={styles.errorLabel}>Oops, check your info</Text>
       </View>
     ) : null;
 
@@ -100,13 +100,13 @@ class AuthForm extends Component {
     for (let key in formCopy) {
       if (this.state.type === "Login") {
         if (key !== "confirmPassword") {
-          ifFormValid = isFormValid && formCopy[key].valid;
+          isFormValid = isFormValid && formCopy[key].valid;
           console.log(formCopy[key].valid);
 
           formToSubmit[key] = formCopy[key].value;
         }
       } else {
-        ifFormValid = isFormValid && formCopy[key].valid;
+        isFormValid = isFormValid && formCopy[key].valid;
         formToSubmit[key] = formCopy[key].value;
       }
     }
