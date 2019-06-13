@@ -10,6 +10,8 @@ import {
 
 import Logo from "./authLogo";
 import AuthForm from "./authForm";
+import { getTokens, setTokens } from "../../utils/forms";
+import { format } from "url";
 
 class AuthComponent extends Component {
   state = {
@@ -19,6 +21,11 @@ class AuthComponent extends Component {
   goNext = () => {
     this.props.navigation.navigate("App");
   };
+
+  componentDidMount() {
+    getTokens(() => {});
+  }
+
   render() {
     if (this.state.loading) return <ActivityIndicator style={styles.loading} />;
     else {
