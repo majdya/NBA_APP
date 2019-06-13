@@ -16,7 +16,7 @@ export const DBURL = "https://rn-nba-app-9d073.firebaseio.com";
 export const APIKEY = `AIzaSyAqnjdMI5nk63vPg6pqWhqDuC3EbjVDVx0`;
 export const SIGNUP = `https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${APIKEY}`;
 export const SIGNIN = `https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=${APIKEY}`;
-export const REFRESH = "";
+export const REFRESH = `https://securetoken.googleapis.com/v1/token?key=${APIKEY}`;
 // export const FIREBASEURL
 
 export const getTokens = cb => {
